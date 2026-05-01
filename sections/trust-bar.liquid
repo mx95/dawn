@@ -1,0 +1,73 @@
+<div class="trust-bar gradient color-{{ section.settings.color_scheme }}">
+  <div class="page-width trust-bar__inner">
+    {%- if section.settings.line_1 != blank -%}
+      <div class="trust-bar__item">
+        <span class="trust-bar__dot" aria-hidden="true"></span>
+        <span>{{ section.settings.line_1 }}</span>
+      </div>
+    {%- endif -%}
+    {%- if section.settings.line_2 != blank -%}
+      <div class="trust-bar__item">
+        <span class="trust-bar__dot" aria-hidden="true"></span>
+        <span>{{ section.settings.line_2 }}</span>
+      </div>
+    {%- endif -%}
+    {%- if section.settings.line_3 != blank -%}
+      <div class="trust-bar__item">
+        <span class="trust-bar__dot" aria-hidden="true"></span>
+        <span>{{ section.settings.line_3 }}</span>
+      </div>
+    {%- endif -%}
+    {%- if section.settings.line_4 != blank -%}
+      <div class="trust-bar__item">
+        <span class="trust-bar__dot" aria-hidden="true"></span>
+        <span>{{ section.settings.line_4 }}</span>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust bar",
+  "tag": "section",
+  "class": "section section-trust-bar",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "text",
+      "id": "line_1",
+      "label": "Trust message 1",
+      "default": "Free Delivery in Cyprus"
+    },
+    {
+      "type": "text",
+      "id": "line_2",
+      "label": "Trust message 2",
+      "default": "1 Year Warranty"
+    },
+    {
+      "type": "text",
+      "id": "line_3",
+      "label": "Trust message 3",
+      "default": "Cash on Delivery"
+    },
+    {
+      "type": "text",
+      "id": "line_4",
+      "label": "Trust message 4",
+      "default": "Secure Payments"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust bar"
+    }
+  ]
+}
+{% endschema %}

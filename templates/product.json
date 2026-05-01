@@ -23,6 +23,21 @@
         "price": {
           "type": "price"
         },
+        "product_trust_row": {
+          "type": "product_trust_row",
+          "settings": {
+            "line_1": "Free delivery in Cyprus",
+            "line_2": "1 year warranty",
+            "line_3": "Cash on delivery available",
+            "line_4": "Secure payments"
+          }
+        },
+        "feature_highlights": {
+          "type": "feature_highlights",
+          "settings": {
+            "features": "Premium materials and finish\nThoughtful ergonomics\nFast setup — ready out of the box"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -90,6 +105,8 @@
         "title",
         "caption",
         "price",
+        "product_trust_row",
+        "feature_highlights",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -102,14 +119,15 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
         "gallery_layout": "stacked",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "mobile_thumbnails": "hide",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 28,
+        "padding_bottom": 40
       }
     },
     "image-with-text": {

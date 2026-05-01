@@ -106,7 +106,7 @@
                   </a>
                 </div>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div id="price-{{ section.id }}" class="product-page-price-row" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -140,6 +140,77 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              {%- when 'product_trust_row' -%}
+                {%- liquid
+                  assign trust_lines = ''
+                  if block.settings.line_1 != blank
+                    assign trust_lines = trust_lines | append: 'x'
+                  endif
+                  if block.settings.line_2 != blank
+                    assign trust_lines = trust_lines | append: 'x'
+                  endif
+                  if block.settings.line_3 != blank
+                    assign trust_lines = trust_lines | append: 'x'
+                  endif
+                  if block.settings.line_4 != blank
+                    assign trust_lines = trust_lines | append: 'x'
+                  endif
+                -%}
+                {%- if trust_lines != blank -%}
+                  <ul class="product__trust-inline" {{ block.shopify_attributes }}>
+                    {%- if block.settings.line_1 != blank -%}
+                      <li>{{ block.settings.line_1 }}</li>
+                    {%- endif -%}
+                    {%- if block.settings.line_2 != blank -%}
+                      <li>{{ block.settings.line_2 }}</li>
+                    {%- endif -%}
+                    {%- if block.settings.line_3 != blank -%}
+                      <li>{{ block.settings.line_3 }}</li>
+                    {%- endif -%}
+                    {%- if block.settings.line_4 != blank -%}
+                      <li>{{ block.settings.line_4 }}</li>
+                    {%- endif -%}
+                  </ul>
+                {%- endif -%}
+              {%- when 'feature_highlights' -%}
+                {%- liquid
+                  assign mf = product.metafields.custom.key_features
+                  assign mf_rendered = false
+                  if mf != blank and mf.value != blank
+                    assign mf_rendered = true
+                  endif
+                -%}
+                {%- if mf_rendered -%}
+                  <div class="product__feature-highlights" {{ block.shopify_attributes }}>
+                    <ul class="product__feature-list" role="list">
+                      {%- if mf.type contains 'list.' -%}
+                        {%- for item in mf.value -%}
+                          <li>{{ item | escape }}</li>
+                        {%- endfor -%}
+                      {%- else -%}
+                        {%- assign mf_lines = mf.value | newline_to_br | split: '<br />' -%}
+                        {%- for line in mf_lines -%}
+                          {%- assign line_strip = line | strip | strip_html -%}
+                          {%- if line_strip != blank -%}
+                            <li>{{ line_strip | escape }}</li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endif -%}
+                    </ul>
+                  </div>
+                {%- elsif block.settings.features != blank -%}
+                  <div class="product__feature-highlights" {{ block.shopify_attributes }}>
+                    <ul class="product__feature-list" role="list">
+                      {%- assign lines = block.settings.features | newline_to_br | split: '<br />' -%}
+                      {%- for line in lines -%}
+                        {%- assign line_strip = line | strip | strip_html -%}
+                        {%- if line_strip != blank -%}
+                          <li>{{ line_strip | escape }}</li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -478,13 +549,15 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                <div class="product-atc-sticky">
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
+                </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -788,6 +861,51 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "product_trust_row",
+      "name": "Trust indicators",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "line_1",
+          "label": "Line 1",
+          "default": "Free delivery in Cyprus"
+        },
+        {
+          "type": "text",
+          "id": "line_2",
+          "label": "Line 2",
+          "default": "1 year warranty"
+        },
+        {
+          "type": "text",
+          "id": "line_3",
+          "label": "Line 3",
+          "default": "Cash on delivery available"
+        },
+        {
+          "type": "text",
+          "id": "line_4",
+          "label": "Line 4",
+          "default": "Secure payments"
+        }
+      ]
+    },
+    {
+      "type": "feature_highlights",
+      "name": "Key features",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "features",
+          "label": "Feature bullets",
+          "default": "Premium build quality\nFast charging ready\nDesigned for everyday use",
+          "info": "One bullet per line. If the product metafield custom.key_features (list of single-line text) is set, it replaces this field."
+        }
+      ]
     },
     {
       "type": "sku",
