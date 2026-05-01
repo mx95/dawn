@@ -8,16 +8,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Premium tech · Cyprus-wide delivery · Secure checkout",
+            "text": "Free shipping on qualifying orders · Secure checkout",
             "text_alignment": "center",
-            "color_scheme": "scheme-4",
+            "color_scheme": "scheme-2",
             "link": ""
           }
         }
       },
-      "block_order": [
-        "announcement-bar-0"
-      ]
+      "block_order": ["announcement-bar-0"]
     },
     "header": {
       "type": "header",
@@ -26,19 +24,16 @@
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "show_line_separator": false,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },
-  "order": [
-    "announcement-bar",
-    "header"
-  ]
+  "order": ["announcement-bar", "header"]
 }

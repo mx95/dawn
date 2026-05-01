@@ -104,6 +104,17 @@
                 >
               {%- endif -%}
             </div>
+            {%- unless horizontal_class -%}
+              <div class="card__quick-view motion-reduce">
+                <a
+                  href="{{ card_product.url }}"
+                  class="card__quick-view-btn"
+                  aria-label="{{ 'general.quick_view' | t }}: {{ card_product.title | escape }}"
+                >
+                  {{- 'general.quick_view' | t -}}
+                </a>
+              </div>
+            {%- endunless -%}
           </div>
         {%- endif -%}
         <div class="card__content">

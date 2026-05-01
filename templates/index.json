@@ -6,21 +6,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Smart Tech. Better Living.",
+            "heading": "Premium Tech. Smarter Living.",
             "heading_size": "hxxl"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Premium tech & gadgets in Cyprus",
+            "text": "Carefully chosen gadgets and accessories — minimal design, maximum performance.",
             "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop collection",
+            "button_label_1": "Shop Now",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -29,38 +29,24 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "block_order": ["heading", "text", "button"],
       "settings": {
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 55,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "trust_bar": {
-      "type": "trust-bar",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "line_1": "Free Delivery in Cyprus",
-        "line_2": "1 Year Warranty",
-        "line_3": "Cash on Delivery",
-        "line_4": "Secure Payments"
-      }
-    },
-    "best_sellers": {
+    "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
-        "heading_size": "h2",
+        "title": "Featured products",
+        "heading_size": "h1",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
@@ -68,134 +54,95 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "outline",
+        "enable_desktop_slider": false,
         "swipe_on_mobile": true,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "shop_categories": {
+      "type": "collection-list",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "cat-1": {
+          "type": "featured_collection",
           "settings": {
             "collection": ""
           }
         },
-        "product": {
-          "type": "product",
+        "cat-2": {
+          "type": "featured_collection",
           "settings": {
-            "product": "",
-            "second_image": false
+            "collection": ""
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "cat-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "cat-4": {
+          "type": "featured_collection",
           "settings": {
             "collection": ""
           }
         }
       },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
+      "block_order": ["cat-1", "cat-2", "cat-3", "cat-4"],
       "settings": {
-        "heading": "Multimedia collage",
+        "title": "Shop by category",
         "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-2",
+        "show_view_all": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
+    "why_us": {
       "type": "multicolumn",
       "blocks": {
-        "column1": {
+        "w1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Fast Cyprus delivery",
+            "text": "<p>Quick dispatch and reliable shipping across Cyprus so you get your tech sooner.<\/p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column2": {
+        "w2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Secure checkout",
+            "text": "<p>Encrypted payments and trusted gateways — your details stay protected.<\/p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column3": {
+        "w3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Trusted tech products",
+            "text": "<p>Genuine gear from brands we stand behind — curated for quality and longevity.<\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["w1", "w2", "w3"],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "Why choose us",
+        "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -206,18 +153,10 @@
         "swipe_on_mobile": false,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 72
       }
     }
   },
-  "order": [
-    "image_banner",
-    "trust_bar",
-    "best_sellers",
-    "rich_text",
-    "collage",
-    "video",
-    "multicolumn"
-  ]
+  "order": ["image_banner", "featured_products", "shop_categories", "why_us"]
 }

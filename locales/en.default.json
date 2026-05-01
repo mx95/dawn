@@ -29,6 +29,7 @@
       }
     },
     "continue_shopping": "Continue shopping",
+    "quick_view": "Quick view",
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",

@@ -1,0 +1,94 @@
+<div class="trust-badges gradient color-{{ section.settings.color_scheme }}">
+  <div class="page-width trust-badges__grid">
+    {%- if section.settings.title_1 != blank -%}
+      <div class="trust-badges__item">
+        <div class="trust-badges__icon" aria-hidden="true">✓</div>
+        <div>
+          <p class="trust-badges__title">{{ section.settings.title_1 }}</p>
+          {%- if section.settings.text_1 != blank -%}
+            <p class="trust-badges__text">{{ section.settings.text_1 }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+    {%- if section.settings.title_2 != blank -%}
+      <div class="trust-badges__item">
+        <div class="trust-badges__icon" aria-hidden="true">◇</div>
+        <div>
+          <p class="trust-badges__title">{{ section.settings.title_2 }}</p>
+          {%- if section.settings.text_2 != blank -%}
+            <p class="trust-badges__text">{{ section.settings.text_2 }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+    {%- if section.settings.title_3 != blank -%}
+      <div class="trust-badges__item">
+        <div class="trust-badges__icon" aria-hidden="true">★</div>
+        <div>
+          <p class="trust-badges__title">{{ section.settings.title_3 }}</p>
+          {%- if section.settings.text_3 != blank -%}
+            <p class="trust-badges__text">{{ section.settings.text_3 }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust badges",
+  "tag": "section",
+  "class": "section trust-badges-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title 1",
+      "default": "Secure checkout"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Text 1",
+      "default": "Encrypted payments & buyer protection."
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title 2",
+      "default": "Fast Cyprus delivery"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Text 2",
+      "default": "Reliable shipping across Cyprus."
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title 3",
+      "default": "Trusted tech"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Text 3",
+      "default": "Curated gadgets from brands you know."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust badges"
+    }
+  ]
+}
+{% endschema %}

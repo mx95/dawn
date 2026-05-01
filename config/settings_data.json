@@ -2,70 +2,70 @@
   "current": "Default",
   "presets": {
     "Default": {
-      "logo_width": 90,
+      "logo_width": 108,
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#0c0c0f",
+            "background": "#FFFFFF",
             "background_gradient": "",
-            "text": "#f5f5f7",
-            "button": "#f5f5f7",
-            "button_label": "#0c0c0f",
-            "secondary_button_label": "#f5f5f7",
-            "shadow": "#000000"
+            "text": "#111111",
+            "button": "#3B82F6",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#3B82F6",
+            "shadow": "#111111"
           }
         },
         "scheme-2": {
           "settings": {
-            "background": "#16161a",
+            "background": "#F7F7F7",
             "background_gradient": "",
-            "text": "#f5f5f7",
-            "button": "#f5f5f7",
-            "button_label": "#16161a",
-            "secondary_button_label": "#f5f5f7",
-            "shadow": "#000000"
+            "text": "#111111",
+            "button": "#3B82F6",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#111111",
+            "shadow": "#111111"
           }
         },
         "scheme-3": {
           "settings": {
-            "background": "#242833",
+            "background": "#E8EDF5",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#000000",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "text": "#111111",
+            "button": "#3B82F6",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#111111",
+            "shadow": "#111111"
           }
         },
         "scheme-4": {
           "settings": {
-            "background": "#121212",
+            "background": "#111111",
             "background_gradient": "",
             "text": "#FFFFFF",
             "button": "#FFFFFF",
-            "button_label": "#121212",
+            "button_label": "#111111",
             "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "shadow": "#000000"
           }
         },
         "scheme-5": {
           "settings": {
-            "background": "#334FB4",
+            "background": "#EFF6FF",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#334FB4",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "text": "#1E3A8A",
+            "button": "#3B82F6",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#3B82F6",
+            "shadow": "#111111"
           }
         }
       },
       "type_header_font": "assistant_n4",
-      "heading_scale": 100,
+      "heading_scale": 104,
       "type_body_font": "assistant_n4",
       "body_scale": 100,
       "page_width": 1200,
-      "spacing_sections": 0,
+      "spacing_sections": 36,
       "spacing_grid_horizontal": 12,
       "spacing_grid_vertical": 12,
       "buttons_border_thickness": 1,
@@ -84,7 +84,7 @@
       "variant_pills_shadow_blur": 5,
       "inputs_border_thickness": 1,
       "inputs_border_opacity": 55,
-      "inputs_radius": 0,
+      "inputs_radius": 12,
       "inputs_shadow_opacity": 0,
       "inputs_shadow_horizontal_offset": 0,
       "inputs_shadow_vertical_offset": 4,
@@ -92,7 +92,7 @@
       "card_style": "standard",
       "card_image_padding": 0,
       "card_text_alignment": "left",
-      "card_color_scheme": "scheme-2",
+      "card_color_scheme": "scheme-1",
       "card_border_thickness": 0,
       "card_border_opacity": 10,
       "card_corner_radius": 14,
@@ -106,7 +106,7 @@
       "collection_card_color_scheme": "scheme-2",
       "collection_card_border_thickness": 0,
       "collection_card_border_opacity": 10,
-      "collection_card_corner_radius": 0,
+      "collection_card_corner_radius": 12,
       "collection_card_shadow_opacity": 0,
       "collection_card_shadow_horizontal_offset": 0,
       "collection_card_shadow_vertical_offset": 4,
